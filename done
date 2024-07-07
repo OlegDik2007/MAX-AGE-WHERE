@@ -1,0 +1,8 @@
+SELECT
+  (
+    MAX(AGE(current_date, birth_date)) - MIN(AGE(current_date, birth_date))
+  ) :: VARCHAR as age_dif
+FROM
+  users
+WHERE
+  sex = 'male'
